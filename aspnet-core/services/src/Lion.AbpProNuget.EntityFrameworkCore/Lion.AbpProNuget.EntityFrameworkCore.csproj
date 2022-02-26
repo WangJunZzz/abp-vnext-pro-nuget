@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\common.props" />
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>Lion.AbpProNuget</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Lion.AbpProNuget.Domain\Lion.AbpProNuget.Domain.csproj" />
+        <PackageReference Include="Lion.AbpPro.EntityFrameworkCore" Version="$(LionAbpProPackageVersion)" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="$(MicrosoftVersion)">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+            <PrivateAssets>compile; contentFiles; build; buildMultitargeting; buildTransitive; analyzers; native</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

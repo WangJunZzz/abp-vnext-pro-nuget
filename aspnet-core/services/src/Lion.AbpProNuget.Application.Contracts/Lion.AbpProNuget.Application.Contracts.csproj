@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Lion.AbpProNuget</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lion.AbpProNuget.Domain.Shared\Lion.AbpProNuget.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lion.AbpPro.Application.Contracts" Version="$(LionAbpProPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AuditLogs\Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="AuditLogs\Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="AuditLogs\Dto\**" />
+  </ItemGroup>
+
+</Project>

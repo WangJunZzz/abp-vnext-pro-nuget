@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>Lion.AbpProNuget</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Lion.AbpProNuget.Domain\Lion.AbpProNuget.Domain.csproj" />
+		<ProjectReference Include="..\Lion.AbpProNuget.Application.Contracts\Lion.AbpProNuget.Application.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lion.AbpPro.Application" Version="$(LionAbpProPackageVersion)" />
+	</ItemGroup>
+
+</Project>

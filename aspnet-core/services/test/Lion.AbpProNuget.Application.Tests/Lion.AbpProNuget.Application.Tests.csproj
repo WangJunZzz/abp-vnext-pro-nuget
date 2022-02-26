@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Lion.AbpProNuget</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Lion.AbpProNuget.Application\Lion.AbpProNuget.Application.csproj" />
+    <ProjectReference Include="..\Lion.AbpProNuget.Domain.Tests\Lion.AbpProNuget.Domain.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
+  </ItemGroup>
+
+</Project>
